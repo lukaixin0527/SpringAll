@@ -11,6 +11,7 @@
     <modules>
         <module>01-Start-SpringBoot</module>
         <module>02-Spring-Boot-Config</module>
+        <module>03-Spring-Boot-MyBatis</module>
     </modules>
 
     <properties>
