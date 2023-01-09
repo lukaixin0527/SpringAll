@@ -12,6 +12,7 @@
         <module>01-Start-SpringBoot</module>
         <module>02-Spring-Boot-Config</module>
         <module>03-Spring-Boot-MyBatis</module>
+        <module>04-Spring-Boot-ShardingJDBC</module>
     </modules>
 
     <properties>
