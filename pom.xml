@@ -15,6 +15,7 @@
         <module>05-Spring-Boot-ShardingJDBC</module>
         <module>04-Spring-Boot-Mybatis-Plus</module>
         <module>06-Spring-Boot-WebService</module>
+        <module>07-SpringCloudAlibaba-Nacos</module>
     </modules>
 
     <properties>
