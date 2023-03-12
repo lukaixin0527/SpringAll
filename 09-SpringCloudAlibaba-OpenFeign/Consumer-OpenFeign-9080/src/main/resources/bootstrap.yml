@@ -1,8 +1,10 @@
 server:
-  port: 8080
+  port: 9080
 spring:
+  profiles:
+    active: dev
   application:
-    name: nacos-demo
+    name: consumer
   cloud:
     nacos:
       discovery:
@@ -11,7 +13,5 @@ spring:
         server-addr: 127.0.0.1:8848
         file-extension: yml
         group: DEFAULT_GROUP
-  config:
-    import:
-      - optional:nacos:${spring.application.name}.${spring.cloud.nacos.config.file-extension}
+
 
