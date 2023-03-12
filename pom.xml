@@ -16,6 +16,8 @@
         <module>04-Spring-Boot-Mybatis-Plus</module>
         <module>06-Spring-Boot-WebService</module>
         <module>07-SpringCloudAlibaba-Nacos</module>
+        <module>08-SpringCloudAlibaba-Ribbon</module>
+        <module>09-SpringCloudAlibaba-OpenFeign</module>
     </modules>
 
     <properties>
