@@ -14,6 +14,7 @@ public class Controller {
     private ConsumerService9080 consumerService9080;
     @Resource
     private ConsumerService9081 consumerService9081;
+
     /**
      * 测试接口
      */
@@ -21,6 +22,16 @@ public class Controller {
     public String getConfigInfo1() {
         System.out.println(consumerService9080.getConfigInfo9080("OpenFeign测试"));
         System.out.println(consumerService9081.getConfigInfo9081("OpenFeign测试"));
-        return "success.............................................................................................................";
+        return "success............................................................................................................." + System.currentTimeMillis();
+    }
+
+
+    @GetMapping("/serverA")
+    public String serverA() {
+        return "success A....................................." + System.currentTimeMillis();
+    }
+    @GetMapping("/serverB")
+    public String serverB() {
+        return "success B....................................." + System.currentTimeMillis();
     }
 }

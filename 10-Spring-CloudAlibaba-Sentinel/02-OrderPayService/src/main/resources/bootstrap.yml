@@ -1,10 +1,10 @@
 server:
-  port: 9090
+  port: 9091
 spring:
   profiles:
     active: dev
   application:
-    name: producer
+    name: orderPayService
   cloud:
     nacos:
       discovery:
@@ -17,6 +17,8 @@ spring:
       transport:
         port: 8719 # 默认8719端口，假如被占用了会自动从8719端口+1进行扫描，直到找到未被占用的 端口
         dashboard: localhost:8080 #配置Sentin dashboard地址（改成自己的服务器ip地址，本地用localhost‍）
+      filter:
+        enabled: false # 配置文件中关闭sentinel官方的CommonFilter实例化
 feign:
   client:
     config:

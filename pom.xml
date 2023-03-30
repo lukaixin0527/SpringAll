@@ -18,6 +18,7 @@
         <module>07-SpringCloudAlibaba-Nacos</module>
         <module>08-SpringCloudAlibaba-Ribbon</module>
         <module>09-SpringCloudAlibaba-OpenFeign</module>
+        <module>10-Spring-CloudAlibaba-Sentinel</module>
     </modules>
 
     <properties>
