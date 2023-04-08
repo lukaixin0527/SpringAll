@@ -19,6 +19,7 @@
         <module>08-SpringCloudAlibaba-Ribbon</module>
         <module>09-SpringCloudAlibaba-OpenFeign</module>
         <module>10-Spring-CloudAlibaba-Sentinel</module>
+        <module>11-Spring-Cloud-GateWay</module>
     </modules>
 
     <properties>

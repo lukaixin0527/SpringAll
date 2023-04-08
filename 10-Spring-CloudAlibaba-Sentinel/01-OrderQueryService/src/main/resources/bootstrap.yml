@@ -57,7 +57,7 @@ logging:
   level:
     com.example.demo.service: debug
 
-
+# 暴露的健康检查服务断点
 management:
   endpoints:
     web:
