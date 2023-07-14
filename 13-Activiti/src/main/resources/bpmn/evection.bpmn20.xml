@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="evection" name="出差申请单" isExecutable="true">
+    <startEvent id="sid-16190916-3165-4795-9030-c48e43473221"/>
+    <userTask id="sid-ea98c5bf-dd7a-45ad-88c3-8944b3f3cb3a" name="创建出差申请单" activiti:assignee="xiaohong"/>
+    <sequenceFlow id="sid-81d2bd57-a452-4140-b037-092c2fb9d68e" sourceRef="sid-16190916-3165-4795-9030-c48e43473221" targetRef="sid-ea98c5bf-dd7a-45ad-88c3-8944b3f3cb3a"/>
+    <userTask id="sid-54384e38-40e8-4047-a96e-2e218959346f" name="部门经理审批" activiti:assignee="xiaoming"/>
+    <sequenceFlow id="sid-1bd986c6-2ae2-489b-925f-7a67844604b7" sourceRef="sid-ea98c5bf-dd7a-45ad-88c3-8944b3f3cb3a" targetRef="sid-54384e38-40e8-4047-a96e-2e218959346f"/>
+    <userTask id="sid-a1e7bbe2-b57c-4c94-9410-2023755a6025" name="总经理审批" activiti:assignee="xiaozhang"/>
+    <sequenceFlow id="sid-1d32dab8-1eba-47d9-98a7-6e8cadc71be7" sourceRef="sid-54384e38-40e8-4047-a96e-2e218959346f" targetRef="sid-a1e7bbe2-b57c-4c94-9410-2023755a6025"/>
+    <userTask id="sid-5b32efc9-a807-4e0f-bc17-26ff68d4ccf3" name="财务审批" activiti:assignee="xiaolu"/>
+    <sequenceFlow id="sid-89f94e56-3832-4925-9fb0-1987641ab6e9" sourceRef="sid-a1e7bbe2-b57c-4c94-9410-2023755a6025" targetRef="sid-5b32efc9-a807-4e0f-bc17-26ff68d4ccf3"/>
+    <endEvent id="sid-18036f01-0fc3-40dd-af06-16c82da5e9fa"/>
+    <sequenceFlow id="sid-8abb080d-93bf-4872-819b-ce30bfa33321" sourceRef="sid-5b32efc9-a807-4e0f-bc17-26ff68d4ccf3" targetRef="sid-18036f01-0fc3-40dd-af06-16c82da5e9fa"/>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_evection">
+    <bpmndi:BPMNPlane bpmnElement="evection" id="BPMNPlane_evection">
+      <bpmndi:BPMNShape id="shape-be11505b-27ae-4991-b5e8-06f17bf5717f" bpmnElement="sid-16190916-3165-4795-9030-c48e43473221">
+        <omgdc:Bounds x="-55.0" y="-155.0" width="30.0" height="30.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape-f36dbc4e-db38-42b8-a803-96371134ecbb" bpmnElement="sid-ea98c5bf-dd7a-45ad-88c3-8944b3f3cb3a">
+        <omgdc:Bounds x="-90.0" y="-95.0" width="100.0" height="80.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-a41ce8fe-c81e-4b5f-bd86-974be7665bf5" bpmnElement="sid-81d2bd57-a452-4140-b037-092c2fb9d68e">
+        <omgdi:waypoint x="-40.0" y="-125.0"/>
+        <omgdi:waypoint x="-40.0" y="-125.0"/>
+        <omgdi:waypoint x="-40.0" y="-112.5"/>
+        <omgdi:waypoint x="-40.0" y="-95.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="shape-64a83f45-506c-411c-acdb-a3121332b476" bpmnElement="sid-54384e38-40e8-4047-a96e-2e218959346f">
+        <omgdc:Bounds x="-90.0" y="5.0" width="100.0" height="80.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-60bcb4a1-3b1b-4c05-90ad-ff45dfc68875" bpmnElement="sid-1bd986c6-2ae2-489b-925f-7a67844604b7">
+        <omgdi:waypoint x="-40.0" y="-15.0"/>
+        <omgdi:waypoint x="-40.0" y="5.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="shape-ff845c62-b453-4a01-b82a-06f12fbbc956" bpmnElement="sid-a1e7bbe2-b57c-4c94-9410-2023755a6025">
+        <omgdc:Bounds x="-90.0" y="100.0" width="100.0" height="80.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-6d95406b-8c83-48fc-8f87-6fec146283b1" bpmnElement="sid-1d32dab8-1eba-47d9-98a7-6e8cadc71be7">
+        <omgdi:waypoint x="-40.0" y="85.0"/>
+        <omgdi:waypoint x="-40.0" y="100.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="shape-b814b592-48f8-4897-a758-fea70bd38af3" bpmnElement="sid-5b32efc9-a807-4e0f-bc17-26ff68d4ccf3">
+        <omgdc:Bounds x="-90.0" y="195.0" width="100.0" height="80.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-98fca1a4-91dd-40f7-ae66-e68af37d7dc0" bpmnElement="sid-89f94e56-3832-4925-9fb0-1987641ab6e9">
+        <omgdi:waypoint x="-40.0" y="180.0"/>
+        <omgdi:waypoint x="-40.0" y="195.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="shape-fd3ff8c6-094d-485c-8de7-af12324e9b7f" bpmnElement="sid-18036f01-0fc3-40dd-af06-16c82da5e9fa">
+        <omgdc:Bounds x="-55.0" y="295.0" width="30.0" height="30.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge-2236312d-1880-443a-bf50-f1cd4cf3c2c1" bpmnElement="sid-8abb080d-93bf-4872-819b-ce30bfa33321">
+        <omgdi:waypoint x="-40.0" y="275.0"/>
+        <omgdi:waypoint x="-40.0" y="295.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
