@@ -20,6 +20,8 @@
         <module>09-SpringCloudAlibaba-OpenFeign</module>
         <module>10-Spring-CloudAlibaba-Sentinel</module>
         <module>11-Spring-Cloud-GateWay</module>
+        <module>12-Hadoop</module>
+        <module>13-Activiti</module>
     </modules>
 
     <properties>
